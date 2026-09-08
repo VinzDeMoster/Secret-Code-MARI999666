@@ -157,7 +157,7 @@ $("showRegister").onclick = () => {
   showView("register");
 };
 
-$("back To Login").onclick = () => showView("login");
+$("backToLogin").onclick = () => showView("login");
 
 $("createAccountBtn").onclick = async () => {
   const name = normalizeUsername($("newUsername").value);
