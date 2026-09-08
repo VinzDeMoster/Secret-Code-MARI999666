@@ -2,7 +2,7 @@ export const LANGUAGES = {
   id: {
     name: "Indonesia",
     title: "Secret Code Translator",
-    loginInfo: "Google/akun sendiri: 21 jam. Guest: 6 jam.",
+    loginInfo: "Silahkan masukkan username dan password akun jika sudah memiliki akun.",
     google: "🔵 Login Google",
     guest: "👤 Guest",
     username: "Username",
@@ -47,7 +47,7 @@ export const LANGUAGES = {
   en: {
     name: "English",
     title: "Secret Code Translator",
-    loginInfo: "Google/own account: 21 hours. Guest: 6 hours.",
+    loginInfo: "Please enter your username and password if you already have an account.",
     google: "🔵 Login with Google",
     guest: "👤 Guest",
     username: "Username",
@@ -92,7 +92,7 @@ export const LANGUAGES = {
   ja: {
     name: "日本語",
     title: "Secret Code Translator",
-    loginInfo: "Google/アカウント: 21時間。ゲスト: 6時間。",
+    loginInfo: "アカウントをお持ちの場合は、ユーザー名とパスワードを入力してください。",
     google: "🔵 Googleでログイン",
     guest: "👤 ゲスト",
     username: "ユーザー名",
@@ -137,7 +137,7 @@ export const LANGUAGES = {
   zh: {
     name: "中文",
     title: "Secret Code Translator",
-    loginInfo: "Google/账户：21小时。访客：6小时。",
+    loginInfo: "如果您已有账号，请输入用户名和密码。",
     google: "🔵 使用 Google 登录",
     guest: "👤 访客",
     username: "用户名",
@@ -182,7 +182,7 @@ export const LANGUAGES = {
   es: {
     name: "Español",
     title: "Secret Code Translator",
-    loginInfo: "Google/cuenta propia: 21 horas. Invitado: 6 horas.",
+    loginInfo: "Si ya tienes una cuenta, introduce tu nombre de usuario y contraseña.",
     google: "🔵 Iniciar sesión con Google",
     guest: "👤 Invitado",
     username: "Usuario",
