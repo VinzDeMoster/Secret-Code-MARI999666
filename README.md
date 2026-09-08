@@ -23,3 +23,6 @@ Google/Guest tidak diperlukan untuk alur login biasa ini.
 
 ## GitHub Pages
 Upload semua file ke root repository yang dipakai GitHub Pages. Pastikan `index.html` berada langsung di root.
+
+
+A-Z default mapping: A=`&#`, B=`@@`, C=`##`, D=`$$`, E=`%%`, dan seterusnya. Mapping ini hanya contoh awal dan bisa kamu sesuaikan di menu Kode Saya.

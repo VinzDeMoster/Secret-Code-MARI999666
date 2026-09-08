@@ -1,7 +1,30 @@
 import { LANGUAGES } from "./languages.js";
+
+const DEFAULT_MAPS = [
+  { plain: "A", secret: "&#" }, { plain: "B", secret: "✓@" },
+  { plain: "C", secret: "{#" }, { plain: "D", secret: "•$" },
+  { plain: "E", secret: "%•" }, { plain: "F", secret: "÷&" },
+  { plain: "G", secret: "√*" }, { plain: "H", secret: "+[" },
+  { plain: "I", secret: "あ=" }, { plain: "J", secret: "/√" },
+  { plain: "K", secret: "::" }, { plain: "L", secret: "!!" },
+  { plain: "M", secret: "た?" }, { plain: "N", secret: "^^" },
+  { plain: "O", secret: "さか~" }, { plain: "P", secret: "@%" },
+  { plain: "Q", secret: "%我" }, { plain: "R", secret: "#@" },
+  { plain: "S", secret: "私#" }, { plain: "T", secret: "#$" },
+  { plain: "U", secret: "&@" }, { plain: "V", secret: "@&" },
+  { plain: "W", secret: "*#" }, { plain: "X", secret: "#*" },
+  { plain: "Y", secret: "+#" }, { plain: "Z", secret: "#+" },
+  { plain: "1", secret: "#kntl+" }, { plain: "0", secret: "mmk" },
+  { plain: "2", secret: "kntl" }, { plain: "3", secret: "mari" },
+  { plain: "4", secret: "÷@1" }, { plain: "5", secret: "∆" },
+  { plain: "6", secret: "sakい" }, { plain: "7", secret: "hiな" },
+  { plain: "8", secret: "🌹" }, { plain: "9", secret: "9" },
+  { plain: "10", secret: "∞" }, { plain: "∞", secret: "®©" },
+];
+
 import { firebaseConfig } from "./firebase-config.js";
 
-let A, Au, F, auth, db, user = null, profile = {}, maps = [];
+let A, Au, F, auth, db, user = null, profile = {}, maps = DEFAULT_MAPS.map(x => ({...x}));
 const $ = id => document.getElementById(id);
 const esc = x => String(x ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
 
@@ -215,7 +238,7 @@ $("logout").onclick = () => Au.signOut(auth);
 
 async function loadCodes() {
   const s = await F.getDoc(F.doc(db, "users", user.uid, "data", "settings"));
-  maps = s.exists() ? (s.data().mappings || []) : [];
+  maps = s.exists() ? (s.data().mappings || DEFAULT_MAPS.map(x => ({...x}))) : [];
   renderMaps();
 }
 
