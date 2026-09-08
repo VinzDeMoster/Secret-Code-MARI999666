@@ -1,5 +1,5 @@
 // Isi konfigurasi Firebase kamu di sini.
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyBIZnKC5wTemkDb2cKS_99S93BYgZ6hKLU",
   authDomain: "admin-panel-sc.firebaseapp.com",
   projectId: "admin-panel-sc",
